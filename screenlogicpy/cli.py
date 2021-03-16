@@ -270,6 +270,9 @@ def cli():
         if "config" not in gateway.get_data():
             return 1
 
+        import json
+        print(json.dumps(gateway.get_data()))
+
         def print_gateway():
             verb = "Using"
             if discovered:
